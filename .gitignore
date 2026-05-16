@@ -1,0 +1,8 @@
+target/
+*.class
+*.jar
+tasks.dat
+.idea/
+*.iml
+.vscode/
+.DS_Store
