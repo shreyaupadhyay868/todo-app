@@ -1,41 +1,28 @@
 package com.todo.model;
 
-import java.time.LocalDateTime;
-import java.util.UUID;
+import java.io.Serializable;
 
-public class Task {
-
+public class Task implements Serializable {
     private String id;
     private String title;
     private boolean completed;
-    private LocalDateTime createdAt;
+    private Priority priority;
 
-    public Task(String title) {
-        this.id        = UUID.randomUUID().toString().substring(0, 8);
-        this.title     = title;
+    public Task(String id, String title, Priority priority) {
+        this.id = id;
+        this.title = title;
         this.completed = false;
-        this.createdAt = LocalDateTime.now();
+        this.priority = priority;
     }
 
-    public Task(String id, String title,
-                boolean completed, LocalDateTime createdAt) {
-        this.id        = id;
-        this.title     = title;
-        this.completed = completed;
-        this.createdAt = createdAt;
-    }
-
-    public String getId()               { return id; }
-    public String getTitle()            { return title; }
-    public boolean isCompleted()        { return completed; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
-
-    public void setTitle(String title)     { this.title = title; }
-    public void setCompleted(boolean done) { this.completed = done; }
+    public String getId() { return id; }
+    public String getTitle() { return title; }
+    public boolean isCompleted() { return completed; }
+    public Priority getPriority() { return priority; }
+    public void setCompleted(boolean completed) { this.completed = completed; }
 
     @Override
     public String toString() {
-        String status = completed ? "[x]" : "[ ]";
-        return status + " " + title + " (ID: " + id + ")";
+        return (completed ? "[X] " : "[ ] ") + "[" + priority + "] " + title + " (id=" + id + ")";
     }
 }
