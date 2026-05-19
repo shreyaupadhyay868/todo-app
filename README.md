@@ -6,6 +6,9 @@ A command-line task manager built in Java. Tasks are saved to disk and persist b
 
 
 
+
+
+
 \## What I Built
 
 
@@ -15,6 +18,10 @@ A command-line task manager built in Java. Tasks are saved to disk and persist b
 \- Tasks saved to a local file (`tasks.dat`) — survive program restart
 
 \- Built with a 3-layer architecture: Model → Service → Storage
+
+
+
+
 
 
 
@@ -56,6 +63,8 @@ java -jar target/todo.jar remove a1b2c3d4
 
 
 
+
+
 \## Project Structure
 
 
@@ -78,6 +87,12 @@ src/main/java/com/todo/
 
 
 
+
+
+
+
+
+
 \## Concepts Practised
 
 
@@ -96,13 +111,21 @@ src/main/java/com/todo/
 
 
 
+
+
+
+
 \## What I Learned
 
 
 
-This was my Week 1–2 Java project. I learned how to structure a real Java application
+I learned how to structure a real Java application
 
 with separated layers, how to persist data to disk, and how to parse command-line arguments.
+
+
+
+
 
 
 
@@ -115,4 +138,13 @@ with separated layers, how to persist data to disk, and how to parse command-lin
 \- Maven
 
 \- JUnit 5
+
+
+
+
+
+
+
+## Progress Update
+Added task priority feature
 
